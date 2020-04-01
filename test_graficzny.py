@@ -14,18 +14,16 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 from symulacja import Populacja
+
 pop = Populacja(20)
 fig, ax = plt.subplots()
 
-wykresy = { 'zdrowy' : plt.plot([], [], 'go')[0],
-           'chory' : plt.plot([], [], 'ro')[0],
-           'nosiciel' : plt.plot([], [], 'yo')[0]
-           }
+wykresy = { 'zdrowy' : plt.plot([], [], 'go')[0], 'chory' : plt.plot([], [], 'ro')[0], 'nosiciel' : plt.plot([], [], 'yo')[0]}
 
 def init():
     ax.set_xlim(0, pop.szerokosc)
     ax.set_ylim(0, pop.wysokosc)
-    return wykresy.values
+    return wykresy.values()
 
 def update(frame):
     pop.ruch()
