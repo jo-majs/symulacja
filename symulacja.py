@@ -75,6 +75,9 @@ class Populacja:
         for p in self._pacjenci:
             s += str(p) + "\n"
         return s
+    def zapis(self, nazwa_pliku):
+       # print("{}")
+        pass
     
     def ruch(self):
         """ Wykonaj ruch przesuwając każdego z pacjentów"""
